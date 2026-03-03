@@ -2,157 +2,206 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Simon Stephan</title>
-    <link>https://simon-stephan.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Simon Stephan</description>
     <generator>Hugo -- 0.157.0</generator>
     <language>fr-fr</language>
     <lastBuildDate>Sun, 01 Mar 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://simon-stephan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Agentic AI</title>
-      <link>https://simon-stephan.github.io/tags/agentic-ai/</link>
+      <link>http://localhost:1313/tags/agentic-ai/</link>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/agentic-ai/</guid>
+      <guid>http://localhost:1313/tags/agentic-ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Définition</title>
-      <link>https://simon-stephan.github.io/tags/d%C3%A9finition/</link>
+      <link>http://localhost:1313/tags/d%C3%A9finition/</link>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/d%C3%A9finition/</guid>
+      <guid>http://localhost:1313/tags/d%C3%A9finition/</guid>
       <description></description>
     </item>
     <item>
       <title>Histoire De L&#39;IA</title>
-      <link>https://simon-stephan.github.io/tags/histoire-de-lia/</link>
+      <link>http://localhost:1313/tags/histoire-de-lia/</link>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/histoire-de-lia/</guid>
+      <guid>http://localhost:1313/tags/histoire-de-lia/</guid>
       <description></description>
     </item>
     <item>
       <title>LLM</title>
-      <link>https://simon-stephan.github.io/tags/llm/</link>
+      <link>http://localhost:1313/tags/llm/</link>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/llm/</guid>
+      <guid>http://localhost:1313/tags/llm/</guid>
       <description></description>
     </item>
     <item>
       <title>MAS</title>
-      <link>https://simon-stephan.github.io/tags/mas/</link>
+      <link>http://localhost:1313/tags/mas/</link>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/mas/</guid>
+      <guid>http://localhost:1313/tags/mas/</guid>
       <description></description>
     </item>
     <item>
       <title>Multi-Agent</title>
-      <link>https://simon-stephan.github.io/tags/multi-agent/</link>
+      <link>http://localhost:1313/tags/multi-agent/</link>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/multi-agent/</guid>
+      <guid>http://localhost:1313/tags/multi-agent/</guid>
       <description></description>
     </item>
     <item>
       <title>Production</title>
-      <link>https://simon-stephan.github.io/tags/production/</link>
+      <link>http://localhost:1313/tags/production/</link>
       <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/production/</guid>
+      <guid>http://localhost:1313/tags/production/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>https://simon-stephan.github.io/tags/python/</link>
+      <link>http://localhost:1313/tags/python/</link>
       <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/python/</guid>
+      <guid>http://localhost:1313/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>RAG</title>
-      <link>https://simon-stephan.github.io/tags/rag/</link>
+      <link>http://localhost:1313/tags/rag/</link>
       <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/rag/</guid>
+      <guid>http://localhost:1313/tags/rag/</guid>
       <description></description>
     </item>
     <item>
       <title>Vector DB</title>
-      <link>https://simon-stephan.github.io/tags/vector-db/</link>
+      <link>http://localhost:1313/tags/vector-db/</link>
       <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/vector-db/</guid>
+      <guid>http://localhost:1313/tags/vector-db/</guid>
       <description></description>
     </item>
     <item>
       <title>Explicabilité</title>
-      <link>https://simon-stephan.github.io/tags/explicabilit%C3%A9/</link>
+      <link>http://localhost:1313/tags/explicabilit%C3%A9/</link>
       <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/explicabilit%C3%A9/</guid>
+      <guid>http://localhost:1313/tags/explicabilit%C3%A9/</guid>
       <description></description>
     </item>
     <item>
       <title>IA Neuro-Symbolique</title>
-      <link>https://simon-stephan.github.io/tags/ia-neuro-symbolique/</link>
+      <link>http://localhost:1313/tags/ia-neuro-symbolique/</link>
       <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/ia-neuro-symbolique/</guid>
+      <guid>http://localhost:1313/tags/ia-neuro-symbolique/</guid>
       <description></description>
     </item>
     <item>
       <title>Ontologies</title>
-      <link>https://simon-stephan.github.io/tags/ontologies/</link>
+      <link>http://localhost:1313/tags/ontologies/</link>
       <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/ontologies/</guid>
+      <guid>http://localhost:1313/tags/ontologies/</guid>
       <description></description>
     </item>
     <item>
-      <title>GNN</title>
-      <link>https://simon-stephan.github.io/tags/gnn/</link>
+      <title>Drug Discovery</title>
+      <link>http://localhost:1313/tags/drug-discovery/</link>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/gnn/</guid>
+      <guid>http://localhost:1313/tags/drug-discovery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Graphes De Connaissances</title>
+      <link>http://localhost:1313/tags/graphes-de-connaissances/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/graphes-de-connaissances/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OMQA</title>
+      <link>http://localhost:1313/tags/omqa/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/omqa/</guid>
       <description></description>
     </item>
     <item>
       <title>Oncologie</title>
-      <link>https://simon-stephan.github.io/tags/oncologie/</link>
+      <link>http://localhost:1313/tags/oncologie/</link>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/oncologie/</guid>
+      <guid>http://localhost:1313/tags/oncologie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ontologie</title>
+      <link>http://localhost:1313/tags/ontologie/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ontologie/</guid>
       <description></description>
     </item>
     <item>
       <title>HPC</title>
-      <link>https://simon-stephan.github.io/tags/hpc/</link>
+      <link>http://localhost:1313/tags/hpc/</link>
       <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/hpc/</guid>
+      <guid>http://localhost:1313/tags/hpc/</guid>
       <description></description>
     </item>
     <item>
       <title>Performance</title>
-      <link>https://simon-stephan.github.io/tags/performance/</link>
+      <link>http://localhost:1313/tags/performance/</link>
       <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/performance/</guid>
+      <guid>http://localhost:1313/tags/performance/</guid>
       <description></description>
     </item>
     <item>
       <title>Rust</title>
-      <link>https://simon-stephan.github.io/tags/rust/</link>
+      <link>http://localhost:1313/tags/rust/</link>
       <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/rust/</guid>
+      <guid>http://localhost:1313/tags/rust/</guid>
       <description></description>
     </item>
     <item>
       <title>Architecture</title>
-      <link>https://simon-stephan.github.io/tags/architecture/</link>
+      <link>http://localhost:1313/tags/architecture/</link>
       <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/architecture/</guid>
+      <guid>http://localhost:1313/tags/architecture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ciblage Thérapeutique</title>
+      <link>http://localhost:1313/tags/ciblage-th%C3%A9rapeutique/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ciblage-th%C3%A9rapeutique/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GNN</title>
+      <link>http://localhost:1313/tags/gnn/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/gnn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Médecine De Précision</title>
+      <link>http://localhost:1313/tags/m%C3%A9decine-de-pr%C3%A9cision/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/m%C3%A9decine-de-pr%C3%A9cision/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Métaheuristiques</title>
+      <link>http://localhost:1313/tags/m%C3%A9taheuristiques/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/m%C3%A9taheuristiques/</guid>
       <description></description>
     </item>
     <item>
       <title>Modélisation Biologique</title>
-      <link>https://simon-stephan.github.io/tags/mod%C3%A9lisation-biologique/</link>
+      <link>http://localhost:1313/tags/mod%C3%A9lisation-biologique/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/mod%C3%A9lisation-biologique/</guid>
+      <guid>http://localhost:1313/tags/mod%C3%A9lisation-biologique/</guid>
       <description></description>
     </item>
     <item>
       <title>Revue De Littérature</title>
-      <link>https://simon-stephan.github.io/tags/revue-de-litt%C3%A9rature/</link>
+      <link>http://localhost:1313/tags/revue-de-litt%C3%A9rature/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/tags/revue-de-litt%C3%A9rature/</guid>
+      <guid>http://localhost:1313/tags/revue-de-litt%C3%A9rature/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Oncologie on Simon Stephan</title>
-    <link>https://simon-stephan.github.io/tags/oncologie/</link>
+    <link>http://localhost:1313/tags/oncologie/</link>
     <description>Recent content in Oncologie on Simon Stephan</description>
     <generator>Hugo -- 0.157.0</generator>
     <language>fr-fr</language>
     <lastBuildDate>Thu, 01 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://simon-stephan.github.io/tags/oncologie/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/oncologie/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Identification of Novel Therapeutic Targets in Oncology Using a Hybrid AI Approach Integrating Ontologies, Multi-Agent Systems, and Neural Networks</title>
-      <link>https://simon-stephan.github.io/research/icprai-2026-hybrid-ai-therapeutic-targets/</link>
+      <title>Towards a Unified Heavyweight Ontology For Therapeutic Targeting</title>
+      <link>http://localhost:1313/research/icprai-2026-hybrid-ai-therapeutic-targets/</link>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/research/icprai-2026-hybrid-ai-therapeutic-targets/</guid>
-      <description>Présentation d&amp;rsquo;un framework d&amp;rsquo;IA hybride pour la découverte de cibles thérapeutiques, avec un focus sur la reconnaissance de motifs complexes.</description>
+      <guid>http://localhost:1313/research/icprai-2026-hybrid-ai-therapeutic-targets/</guid>
+      <description>Proposition d&amp;rsquo;une ontologie unifiée pour l&amp;rsquo;agrégation de sources de données biologiques hétérogènes et l&amp;rsquo;identification de nouvelles cibles thérapeutiques.</description>
     </item>
     <item>
-      <title>Agent-based approaches for biological modeling in oncology: A literature review</title>
-      <link>https://simon-stephan.github.io/research/aim-2024-agent-based-biological-modeling-oncology/</link>
-      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/research/aim-2024-agent-based-biological-modeling-oncology/</guid>
-      <description>Étude exhaustive des architectures agentiques (MAS) appliquées à la modélisation biologique complexe en oncologie.</description>
-    </item>
-    <item>
-      <title>Identification de nouvelles cibles thérapeutiques par hybridation d&#39;Ontologies, systèmes Multi-Agents et réseaux de neurones</title>
-      <link>https://simon-stephan.github.io/research/jfsma-2025-hybridation-ontologies-mas-neurones/</link>
+      <title>Identification de nouvelles cibles thérapeutiques en oncologie par l&#39;hybridation d&#39;une ontologie, d&#39;un système multiagent et d&#39;un réseau de neurones</title>
+      <link>http://localhost:1313/research/jfsma-2025-hybridation-ontologies-mas-neurones/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/research/jfsma-2025-hybridation-ontologies-mas-neurones/</guid>
-      <description>Présentation d&amp;rsquo;une architecture novatrice permettant l&amp;rsquo;explicabilité et le raisonnement automatisé sur des données de nature hétérogène.</description>
+      <guid>http://localhost:1313/research/jfsma-2025-hybridation-ontologies-mas-neurones/</guid>
+      <description>Modèle hybride d&amp;rsquo;IA intégrant ontologies, réseaux de neurones et simulations orientées-agent pour l&amp;rsquo;identification de nouvelles cibles thérapeutiques en oncologie.</description>
+    </item>
+    <item>
+      <title>Agent-based approaches for biological modeling in oncology: a literature review</title>
+      <link>http://localhost:1313/research/aim-2024-agent-based-biological-modeling-oncology/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/research/aim-2024-agent-based-biological-modeling-oncology/</guid>
+      <description>Revue exhaustive de la littérature sur les approches agentiques (MAS) appliquées à la modélisation biologique en oncologie, couvrant la période 2010–2023.</description>
     </item>
   </channel>
 </rss>

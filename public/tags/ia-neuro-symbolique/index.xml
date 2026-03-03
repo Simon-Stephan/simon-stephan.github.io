@@ -2,31 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>IA Neuro-Symbolique on Simon Stephan</title>
-    <link>https://simon-stephan.github.io/tags/ia-neuro-symbolique/</link>
+    <link>http://localhost:1313/tags/ia-neuro-symbolique/</link>
     <description>Recent content in IA Neuro-Symbolique on Simon Stephan</description>
     <generator>Hugo -- 0.157.0</generator>
     <language>fr-fr</language>
     <lastBuildDate>Tue, 20 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://simon-stephan.github.io/tags/ia-neuro-symbolique/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ia-neuro-symbolique/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Identification of Novel Therapeutic Targets in Oncology Using a Hybrid AI Approach Integrating Ontologies, Multi-Agent Systems, and Neural Networks</title>
-      <link>https://simon-stephan.github.io/research/icprai-2026-hybrid-ai-therapeutic-targets/</link>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/research/icprai-2026-hybrid-ai-therapeutic-targets/</guid>
-      <description>Présentation d&amp;rsquo;un framework d&amp;rsquo;IA hybride pour la découverte de cibles thérapeutiques, avec un focus sur la reconnaissance de motifs complexes.</description>
-    </item>
-    <item>
-      <title>Identification de nouvelles cibles thérapeutiques par hybridation d&#39;Ontologies, systèmes Multi-Agents et réseaux de neurones</title>
-      <link>https://simon-stephan.github.io/research/jfsma-2025-hybridation-ontologies-mas-neurones/</link>
+      <title>Identification de nouvelles cibles thérapeutiques en oncologie par l&#39;hybridation d&#39;une ontologie, d&#39;un système multiagent et d&#39;un réseau de neurones</title>
+      <link>http://localhost:1313/research/jfsma-2025-hybridation-ontologies-mas-neurones/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/research/jfsma-2025-hybridation-ontologies-mas-neurones/</guid>
-      <description>Présentation d&amp;rsquo;une architecture novatrice permettant l&amp;rsquo;explicabilité et le raisonnement automatisé sur des données de nature hétérogène.</description>
+      <guid>http://localhost:1313/research/jfsma-2025-hybridation-ontologies-mas-neurones/</guid>
+      <description>Modèle hybride d&amp;rsquo;IA intégrant ontologies, réseaux de neurones et simulations orientées-agent pour l&amp;rsquo;identification de nouvelles cibles thérapeutiques en oncologie.</description>
     </item>
     <item>
       <title>IA Neuro-Symbolique : pourquoi les LLM ne suffisent pas</title>
-      <link>https://simon-stephan.github.io/posts/ia-neuro-symbolique-pourquoi/</link>
+      <link>http://localhost:1313/posts/ia-neuro-symbolique-pourquoi/</link>
       <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/posts/ia-neuro-symbolique-pourquoi/</guid>
+      <guid>http://localhost:1313/posts/ia-neuro-symbolique-pourquoi/</guid>
       <description>Les réseaux de neurones excellent en reconnaissance de motifs. Les systèmes symboliques excellent en raisonnement. L&amp;rsquo;avenir est dans leur hybridation.</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Architecture on Simon Stephan</title>
-    <link>https://simon-stephan.github.io/tags/architecture/</link>
+    <link>http://localhost:1313/tags/architecture/</link>
     <description>Recent content in Architecture on Simon Stephan</description>
     <generator>Hugo -- 0.157.0</generator>
     <language>fr-fr</language>
     <lastBuildDate>Mon, 10 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://simon-stephan.github.io/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Systèmes Multi-Agents : orchestrer l&#39;intelligence artificielle</title>
-      <link>https://simon-stephan.github.io/posts/systemes-multi-agents-orchestration-ia/</link>
+      <link>http://localhost:1313/posts/systemes-multi-agents-orchestration-ia/</link>
       <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://simon-stephan.github.io/posts/systemes-multi-agents-orchestration-ia/</guid>
+      <guid>http://localhost:1313/posts/systemes-multi-agents-orchestration-ia/</guid>
       <description>Les systèmes multi-agents ne sont pas nouveaux. Mais combinés aux LLM, ils ouvrent des possibilités architecturales inédites.</description>
     </item>
   </channel>
