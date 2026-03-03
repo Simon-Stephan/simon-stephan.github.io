@@ -1,0 +1,88 @@
+baseURL = 'https://simon-stephan.github.io/'
+languageCode = 'fr-fr'
+title = 'Simon Stephan'
+theme = 'PaperMod'
+
+[params]
+    env = "production"
+    title = "Simon Stephan"
+    description = "Staff AI Engineer — Architectures Neuro-Symboliques & Systèmes Agentiques"
+    author = "Simon Stephan"
+
+    defaultTheme = "auto"
+    showCodeCopyButtons = true
+    showReadingTime = true
+    showShareButtons = false
+    showPostNavLinks = true
+    showBreadCrumbs = true
+
+    # LaTeX (KaTeX)
+    math = true
+
+    [params.homeInfoParams]
+        Title = "Simon Stephan"
+        Content = "Staff AI Engineer & Chercheur Ph.D. en Intelligence Artificielle, spécialisé en IA Neuro-Symbolique et Systèmes Agentiques. Ce blog regroupe mes travaux de recherche, mes projets et mes articles techniques."
+
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/Simon-Stephan"
+    [[params.socialIcons]]
+        name = "linkedin"
+        url = "https://linkedin.com/in/simon-stephan-phd"
+    [[params.socialIcons]]
+        name = "cv"
+        url = "/cv.pdf"
+    [[params.socialIcons]]
+        name = "email"
+        url = "mailto:simon.stephan.phd@gmail.com"
+
+# --- MENUS ---
+[menu]
+    [[menu.main]]
+        identifier = "articles"
+        name = "Articles"
+        url = "/posts/"
+        weight = 10
+
+    [[menu.main]]
+        identifier = "research"
+        name = "Recherche"
+        url = "/research/"
+        weight = 20
+
+    [[menu.main]]
+        identifier = "projects"
+        name = "Projets"
+        url = "https://github.com/Simon-Stephan?tab=repositories"
+        weight = 30
+
+    [[menu.main]]
+        identifier = "about"
+        name = "À propos"
+        url = "/about/"
+        weight = 40
+
+# --- PERMALINKS ---
+# URL propres : /posts/titre-article/ et /research/titre-publication/
+# Le rangement en dossiers YYYY/MM/ sur le disque n'affecte pas l'URL
+[permalinks]
+    [permalinks.page]
+        posts = "/posts/:contentbasename/"
+        research = "/research/:contentbasename/"
+    [permalinks.section]
+        posts = "/posts/"
+        research = "/research/"
+
+# --- MARKUP ---
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    style = "monokai"
+
+# --- OUTPUTS ---
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
+    section = ["HTML", "RSS"]

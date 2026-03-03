@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Simon Stephan</title>
+    <link>https://simon-stephan.github.io/</link>
+    <description>Recent content on Simon Stephan</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Sun, 01 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://simon-stephan.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Identification of Novel Therapeutic Targets in Oncology Using a Hybrid AI Approach Integrating Ontologies, Multi-Agent Systems, and Neural Networks</title>
+      <link>https://simon-stephan.github.io/research/icprai-2026-hybrid-ai-therapeutic-targets/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/research/icprai-2026-hybrid-ai-therapeutic-targets/</guid>
+      <description>Présentation d&amp;rsquo;un framework d&amp;rsquo;IA hybride pour la découverte de cibles thérapeutiques, avec un focus sur la reconnaissance de motifs complexes.</description>
+    </item>
+    <item>
+      <title>Agent-based approaches for biological modeling in oncology: A literature review</title>
+      <link>https://simon-stephan.github.io/research/aim-2024-agent-based-biological-modeling-oncology/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/research/aim-2024-agent-based-biological-modeling-oncology/</guid>
+      <description>Étude exhaustive des architectures agentiques (MAS) appliquées à la modélisation biologique complexe en oncologie.</description>
+    </item>
+    <item>
+      <title>Identification de nouvelles cibles thérapeutiques par hybridation d&#39;Ontologies, systèmes Multi-Agents et réseaux de neurones</title>
+      <link>https://simon-stephan.github.io/research/jfsma-2025-hybridation-ontologies-mas-neurones/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/research/jfsma-2025-hybridation-ontologies-mas-neurones/</guid>
+      <description>Présentation d&amp;rsquo;une architecture novatrice permettant l&amp;rsquo;explicabilité et le raisonnement automatisé sur des données de nature hétérogène.</description>
+    </item>
+    <item>
+      <title>C&#39;est quoi un &#39;agent&#39; en IA ? De Wooldridge &amp; Jennings aux LLM agents</title>
+      <link>https://simon-stephan.github.io/posts/definition-agent-ia-histoire-evolution/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/posts/definition-agent-ia-histoire-evolution/</guid>
+      <description>Le mot &amp;lsquo;agent&amp;rsquo; est partout. Mais sa définition actuelle est une version appauvrie d&amp;rsquo;un concept riche né dans les années 90. Retour aux sources.</description>
+    </item>
+    <item>
+      <title>Construire un pipeline RAG pour la production : retour d&#39;expérience</title>
+      <link>https://simon-stephan.github.io/posts/rag-pipeline-production-retour-experience/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/posts/rag-pipeline-production-retour-experience/</guid>
+      <description>Les leçons tirées de la conception et du déploiement d&amp;rsquo;un pipeline de Retrieval-Augmented Generation en environnement industriel.</description>
+    </item>
+    <item>
+      <title>IA Neuro-Symbolique : pourquoi les LLM ne suffisent pas</title>
+      <link>https://simon-stephan.github.io/posts/ia-neuro-symbolique-pourquoi/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/posts/ia-neuro-symbolique-pourquoi/</guid>
+      <description>Les réseaux de neurones excellent en reconnaissance de motifs. Les systèmes symboliques excellent en raisonnement. L&amp;rsquo;avenir est dans leur hybridation.</description>
+    </item>
+    <item>
+      <title>Rust pour l&#39;ingénieur IA : au-delà du hype</title>
+      <link>https://simon-stephan.github.io/posts/rust-pour-ingenieur-ia/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/posts/rust-pour-ingenieur-ia/</guid>
+      <description>Python pour prototyper, Rust pour déployer. Retour pragmatique sur l&amp;rsquo;adoption de Rust dans un contexte d&amp;rsquo;IA industrielle.</description>
+    </item>
+    <item>
+      <title>Systèmes Multi-Agents : orchestrer l&#39;intelligence artificielle</title>
+      <link>https://simon-stephan.github.io/posts/systemes-multi-agents-orchestration-ia/</link>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/posts/systemes-multi-agents-orchestration-ia/</guid>
+      <description>Les systèmes multi-agents ne sont pas nouveaux. Mais combinés aux LLM, ils ouvrent des possibilités architecturales inédites.</description>
+    </item>
+    <item>
+      <title>À propos</title>
+      <link>https://simon-stephan.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/about/</guid>
+      <description>Simon Stephan, Ph.D. — Staff AI Engineer, spécialisé en IA Neuro-Symbolique &amp;amp; Systèmes Agentiques</description>
+    </item>
+  </channel>
+</rss>

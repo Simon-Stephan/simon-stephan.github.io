@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51680&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>IA Neuro-Symbolique : pourquoi les LLM ne suffisent pas | Simon Stephan</title>
+<meta name="keywords" content="IA Neuro-Symbolique, LLM, Ontologies, Explicabilité">
+<meta name="description" content="Les réseaux de neurones excellent en reconnaissance de motifs. Les systèmes symboliques excellent en raisonnement. L&rsquo;avenir est dans leur hybridation.">
+<meta name="author" content="Simon Stephan">
+<link rel="canonical" href="http://localhost:51680/posts/ia-neuro-symbolique-pourquoi/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.980b57660127a2dc84a6e20b2e6fa507b89870944008739c3ec321bb6ed4e037.css" integrity="sha256-mAtXZgEnotyEpuILLm&#43;lB7iYcJRACHOcPsMhu27U4Dc=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:51680/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:51680/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:51680/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:51680/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:51680/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:51680/posts/ia-neuro-symbolique-pourquoi/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<meta property="og:url" content="http://localhost:51680/posts/ia-neuro-symbolique-pourquoi/">
+  <meta property="og:site_name" content="Simon Stephan">
+  <meta property="og:title" content="IA Neuro-Symbolique : pourquoi les LLM ne suffisent pas">
+  <meta property="og:description" content="Les réseaux de neurones excellent en reconnaissance de motifs. Les systèmes symboliques excellent en raisonnement. L’avenir est dans leur hybridation.">
+  <meta property="og:locale" content="fr-fr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-20T00:00:00+00:00">
+    <meta property="article:tag" content="IA Neuro-Symbolique">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Ontologies">
+    <meta property="article:tag" content="Explicabilité">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IA Neuro-Symbolique : pourquoi les LLM ne suffisent pas">
+<meta name="twitter:description" content="Les réseaux de neurones excellent en reconnaissance de motifs. Les systèmes symboliques excellent en raisonnement. L&rsquo;avenir est dans leur hybridation.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "http://localhost:51680/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "IA Neuro-Symbolique : pourquoi les LLM ne suffisent pas",
+      "item": "http://localhost:51680/posts/ia-neuro-symbolique-pourquoi/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "IA Neuro-Symbolique : pourquoi les LLM ne suffisent pas",
+  "name": "IA Neuro-Symbolique : pourquoi les LLM ne suffisent pas",
+  "description": "Les réseaux de neurones excellent en reconnaissance de motifs. Les systèmes symboliques excellent en raisonnement. L\u0026rsquo;avenir est dans leur hybridation.",
+  "keywords": [
+    "IA Neuro-Symbolique", "LLM", "Ontologies", "Explicabilité"
+  ],
+  "articleBody": "Le constat Les LLM sont impressionnants. Ils génèrent du texte cohérent, résument des documents, écrivent du code. Mais demandez à GPT-4 de vous expliquer pourquoi il a produit une réponse donnée, et vous obtiendrez au mieux une rationalisation post-hoc, pas une trace de raisonnement.\nDans des domaines critiques — santé, nucléaire, finance — ce manque d’explicabilité est un problème bloquant.\nDeux paradigmes, une complémentarité L’IA connexionniste (réseaux de neurones) Forces :\nApprentissage à partir de données brutes Reconnaissance de motifs complexes Gestion de l’ambiguïté et du bruit Faiblesses :\nOpaque (“boîte noire”) Pas de garantie logique Hallucinations L’IA symbolique (ontologies, règles, logique) Forces :\nRaisonnement explicable et traçable Contraintes logiques respectées Intégration de connaissances expertes Faiblesses :\nNe gère pas bien l’incertitude Nécessite une modélisation manuelle Fragile face aux données bruitées L’approche hybride L’idée de l’IA neuro-symbolique est simple : utiliser chaque paradigme là où il excelle.\nDans mes travaux de thèse, j’ai développé une architecture où :\nUn réseau de neurones sur graphes (GNN) identifie des motifs dans des données biologiques complexes Une ontologie structure les connaissances du domaine et définit les contraintes de validité Un système multi-agents orchestre le tout, chaque agent ayant un rôle défini (exploration, validation, explication) Le résultat : un système capable de proposer des hypothèses et d’expliquer son raisonnement étape par étape.\nUn exemple concret Prenons l’identification de cibles thérapeutiques en oncologie.\nUn modèle purement connexionniste peut analyser des données d’expression génique et sortir une liste de gènes candidats. Mais il ne peut pas dire pourquoi ces gènes sont pertinents au regard des mécanismes biologiques connus.\nEn injectant une ontologie biomédicale dans le pipeline, on peut :\nFiltrer les candidats incohérents avec les connaissances établies Enrichir les résultats avec des voies de signalisation connues Tracer le chemin de raisonnement du système de bout en bout Pourquoi ça compte maintenant L’AI Act européen impose des exigences d’explicabilité pour les systèmes IA à haut risque. Les approches purement “boîte noire” deviennent juridiquement problématiques dans de nombreux secteurs.\nL’IA neuro-symbolique n’est pas une curiosité académique. C’est une nécessité industrielle.\nPour aller plus loin : mon article dans Artificial Intelligence in Medicine détaille les architectures agentiques appliquées à la modélisation biologique en oncologie. Disponible dans la section Recherche.\n",
+  "wordCount" : "370",
+  "inLanguage": "en",
+  "datePublished": "2026-01-20T00:00:00Z",
+  "dateModified": "2026-01-20T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Simon Stephan"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:51680/posts/ia-neuro-symbolique-pourquoi/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Simon Stephan",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:51680/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:51680/" accesskey="h" title="Simon Stephan (Alt + H)">Simon Stephan</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:51680/posts/" title="Articles">
+                    <span>Articles</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:51680/research/" title="Recherche">
+                    <span>Recherche</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Simon-Stephan?tab=repositories" title="Projets">
+                    <span>Projets</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:51680/about/" title="À propos">
+                    <span>À propos</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:51680/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:51680/posts/">Articles</a></div>
+    <h1 class="post-title entry-hint-parent">
+      IA Neuro-Symbolique : pourquoi les LLM ne suffisent pas
+    </h1>
+    <div class="post-meta"><span title='2026-01-20 00:00:00 +0000 UTC'>January 20, 2026</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Simon Stephan</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="le-constat">Le constat<a hidden class="anchor" aria-hidden="true" href="#le-constat">#</a></h2>
+<p>Les LLM sont impressionnants. Ils génèrent du texte cohérent, résument des documents, écrivent du code. Mais demandez à GPT-4 de vous expliquer <em>pourquoi</em> il a produit une réponse donnée, et vous obtiendrez au mieux une rationalisation post-hoc, pas une trace de raisonnement.</p>
+<p>Dans des domaines critiques — santé, nucléaire, finance — ce manque d&rsquo;explicabilité est un problème bloquant.</p>
+<h2 id="deux-paradigmes-une-complémentarité">Deux paradigmes, une complémentarité<a hidden class="anchor" aria-hidden="true" href="#deux-paradigmes-une-complémentarité">#</a></h2>
+<h3 id="lia-connexionniste-réseaux-de-neurones">L&rsquo;IA connexionniste (réseaux de neurones)<a hidden class="anchor" aria-hidden="true" href="#lia-connexionniste-réseaux-de-neurones">#</a></h3>
+<p>Forces :</p>
+<ul>
+<li>Apprentissage à partir de données brutes</li>
+<li>Reconnaissance de motifs complexes</li>
+<li>Gestion de l&rsquo;ambiguïté et du bruit</li>
+</ul>
+<p>Faiblesses :</p>
+<ul>
+<li>Opaque (&ldquo;boîte noire&rdquo;)</li>
+<li>Pas de garantie logique</li>
+<li>Hallucinations</li>
+</ul>
+<h3 id="lia-symbolique-ontologies-règles-logique">L&rsquo;IA symbolique (ontologies, règles, logique)<a hidden class="anchor" aria-hidden="true" href="#lia-symbolique-ontologies-règles-logique">#</a></h3>
+<p>Forces :</p>
+<ul>
+<li>Raisonnement explicable et traçable</li>
+<li>Contraintes logiques respectées</li>
+<li>Intégration de connaissances expertes</li>
+</ul>
+<p>Faiblesses :</p>
+<ul>
+<li>Ne gère pas bien l&rsquo;incertitude</li>
+<li>Nécessite une modélisation manuelle</li>
+<li>Fragile face aux données bruitées</li>
+</ul>
+<h2 id="lapproche-hybride">L&rsquo;approche hybride<a hidden class="anchor" aria-hidden="true" href="#lapproche-hybride">#</a></h2>
+<p>L&rsquo;idée de l&rsquo;IA neuro-symbolique est simple : utiliser chaque paradigme là où il excelle.</p>
+<p>Dans mes travaux de thèse, j&rsquo;ai développé une architecture où :</p>
+<ol>
+<li>Un <strong>réseau de neurones sur graphes (GNN)</strong> identifie des motifs dans des données biologiques complexes</li>
+<li>Une <strong>ontologie</strong> structure les connaissances du domaine et définit les contraintes de validité</li>
+<li>Un <strong>système multi-agents</strong> orchestre le tout, chaque agent ayant un rôle défini (exploration, validation, explication)</li>
+</ol>
+<p>Le résultat : un système capable de proposer des hypothèses <em>et</em> d&rsquo;expliquer son raisonnement étape par étape.</p>
+<h2 id="un-exemple-concret">Un exemple concret<a hidden class="anchor" aria-hidden="true" href="#un-exemple-concret">#</a></h2>
+<p>Prenons l&rsquo;identification de cibles thérapeutiques en oncologie.</p>
+<p>Un modèle purement connexionniste peut analyser des données d&rsquo;expression génique et sortir une liste de gènes candidats. Mais il ne peut pas dire <em>pourquoi</em> ces gènes sont pertinents au regard des mécanismes biologiques connus.</p>
+<p>En injectant une ontologie biomédicale dans le pipeline, on peut :</p>
+<ul>
+<li><strong>Filtrer</strong> les candidats incohérents avec les connaissances établies</li>
+<li><strong>Enrichir</strong> les résultats avec des voies de signalisation connues</li>
+<li><strong>Tracer</strong> le chemin de raisonnement du système de bout en bout</li>
+</ul>
+<h2 id="pourquoi-ça-compte-maintenant">Pourquoi ça compte maintenant<a hidden class="anchor" aria-hidden="true" href="#pourquoi-ça-compte-maintenant">#</a></h2>
+<p>L&rsquo;AI Act européen impose des exigences d&rsquo;explicabilité pour les systèmes IA à haut risque. Les approches purement &ldquo;boîte noire&rdquo; deviennent juridiquement problématiques dans de nombreux secteurs.</p>
+<p>L&rsquo;IA neuro-symbolique n&rsquo;est pas une curiosité académique. C&rsquo;est une nécessité industrielle.</p>
+<hr>
+<p><em>Pour aller plus loin : mon article dans Artificial Intelligence in Medicine détaille les architectures agentiques appliquées à la modélisation biologique en oncologie. Disponible dans la section <a href="/research/">Recherche</a>.</em></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:51680/tags/ia-neuro-symbolique/">IA Neuro-Symbolique</a></li>
+      <li><a href="http://localhost:51680/tags/llm/">LLM</a></li>
+      <li><a href="http://localhost:51680/tags/ontologies/">Ontologies</a></li>
+      <li><a href="http://localhost:51680/tags/explicabilit%C3%A9/">Explicabilité</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:51680/posts/rag-pipeline-production-retour-experience/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Construire un pipeline RAG pour la production : retour d&#39;expérience</span>
+  </a>
+  <a class="next" href="http://localhost:51680/posts/rust-pour-ingenieur-ia/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Rust pour l&#39;ingénieur IA : au-delà du hype</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:51680/">Simon Stephan</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

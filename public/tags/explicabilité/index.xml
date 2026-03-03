@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Explicabilité on Simon Stephan</title>
+    <link>https://simon-stephan.github.io/tags/explicabilit%C3%A9/</link>
+    <description>Recent content in Explicabilité on Simon Stephan</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Tue, 20 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://simon-stephan.github.io/tags/explicabilit%C3%A9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IA Neuro-Symbolique : pourquoi les LLM ne suffisent pas</title>
+      <link>https://simon-stephan.github.io/posts/ia-neuro-symbolique-pourquoi/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/posts/ia-neuro-symbolique-pourquoi/</guid>
+      <description>Les réseaux de neurones excellent en reconnaissance de motifs. Les systèmes symboliques excellent en raisonnement. L&amp;rsquo;avenir est dans leur hybridation.</description>
+    </item>
+  </channel>
+</rss>

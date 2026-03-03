@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vector DB on Simon Stephan</title>
+    <link>https://simon-stephan.github.io/tags/vector-db/</link>
+    <description>Recent content in Vector DB on Simon Stephan</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Sun, 15 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://simon-stephan.github.io/tags/vector-db/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Construire un pipeline RAG pour la production : retour d&#39;expérience</title>
+      <link>https://simon-stephan.github.io/posts/rag-pipeline-production-retour-experience/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/posts/rag-pipeline-production-retour-experience/</guid>
+      <description>Les leçons tirées de la conception et du déploiement d&amp;rsquo;un pipeline de Retrieval-Augmented Generation en environnement industriel.</description>
+    </item>
+  </channel>
+</rss>

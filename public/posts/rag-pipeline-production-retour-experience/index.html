@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51680&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Construire un pipeline RAG pour la production : retour d&#39;expérience | Simon Stephan</title>
+<meta name="keywords" content="RAG, LLM, Python, Vector DB, Production">
+<meta name="description" content="Les leçons tirées de la conception et du déploiement d&rsquo;un pipeline de Retrieval-Augmented Generation en environnement industriel.">
+<meta name="author" content="Simon Stephan">
+<link rel="canonical" href="http://localhost:51680/posts/rag-pipeline-production-retour-experience/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.980b57660127a2dc84a6e20b2e6fa507b89870944008739c3ec321bb6ed4e037.css" integrity="sha256-mAtXZgEnotyEpuILLm&#43;lB7iYcJRACHOcPsMhu27U4Dc=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:51680/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:51680/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:51680/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:51680/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:51680/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:51680/posts/rag-pipeline-production-retour-experience/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'default',
+    securityLevel: 'loose',
+  });
+</script>
+<meta property="og:url" content="http://localhost:51680/posts/rag-pipeline-production-retour-experience/">
+  <meta property="og:site_name" content="Simon Stephan">
+  <meta property="og:title" content="Construire un pipeline RAG pour la production : retour d&#39;expérience">
+  <meta property="og:description" content="Les leçons tirées de la conception et du déploiement d’un pipeline de Retrieval-Augmented Generation en environnement industriel.">
+  <meta property="og:locale" content="fr-fr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-02-15T00:00:00+00:00">
+    <meta property="article:tag" content="RAG">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Vector DB">
+    <meta property="article:tag" content="Production">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Construire un pipeline RAG pour la production : retour d&#39;expérience">
+<meta name="twitter:description" content="Les leçons tirées de la conception et du déploiement d&rsquo;un pipeline de Retrieval-Augmented Generation en environnement industriel.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "http://localhost:51680/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Construire un pipeline RAG pour la production : retour d'expérience",
+      "item": "http://localhost:51680/posts/rag-pipeline-production-retour-experience/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Construire un pipeline RAG pour la production : retour d'expérience",
+  "name": "Construire un pipeline RAG pour la production : retour d\u0027expérience",
+  "description": "Les leçons tirées de la conception et du déploiement d\u0026rsquo;un pipeline de Retrieval-Augmented Generation en environnement industriel.",
+  "keywords": [
+    "RAG", "LLM", "Python", "Vector DB", "Production"
+  ],
+  "articleBody": "Le problème La plupart des tutoriels RAG s’arrêtent au prototype. Appeler une API d’embedding, stocker des vecteurs dans ChromaDB et interroger un LLM, ça tient en 50 lignes de Python. Mais entre ce prototype et un système fiable en production, il y a un gouffre.\nLors de mon passage chez OPSOMA, j’ai conçu un pipeline RAG complet pour automatiser la recherche dans une base documentaire technique de plusieurs milliers de documents. Voici ce que j’en retiens.\nArchitecture retenue graph LR A[Documents] --\u003e B[Chunking] B --\u003e C[Embeddings] C --\u003e D[(Vector Store)] E[Query] --\u003e F[Embedding] F --\u003e G[Retrieval] D --\u003e G G --\u003e H[Reranking] H --\u003e I[LLM] I --\u003e J[Réponse] Chunking : le maillon critique Le découpage des documents est le facteur qui influence le plus la qualité des résultats. Après plusieurs itérations :\nTaille de chunk : 512 tokens avec un overlap de 64 s’est avéré être le meilleur compromis Découpage sémantique : on ne coupe pas au milieu d’un paragraphe. Un splitter basé sur la structure du document (titres, sections) surpasse systématiquement un découpage naïf par nombre de tokens Métadonnées : chaque chunk embarque le titre du document source, la section parente et la date. Ces métadonnées sont essentielles pour le filtrage en amont du retrieval Reranking : le gain silencieux Le retrieval par similarité cosinus retourne souvent des résultats “proches mais hors sujet”. L’ajout d’un cross-encoder en phase de reranking a amélioré la précision de nos réponses de manière significative, pour un coût de latence acceptable (~100ms sur les 10 premiers résultats).\nLes pièges rencontrés 1. La dérive des embeddings Les modèles d’embedding évoluent. Une mise à jour du modèle invalide l’intégralité de votre vector store. Il faut :\nVersionner le modèle d’embedding utilisé Prévoir un pipeline de ré-indexation complet Ne jamais mélanger des vecteurs issus de modèles différents 2. L’évaluation Comment mesurer la qualité d’un système RAG ? Nous avons mis en place :\nUn jeu de test de 200 questions/réponses validées par des experts métier Des métriques de retrieval (recall@k, MRR) séparées des métriques de génération (fidélité, pertinence) Un pipeline d’évaluation automatisé exécuté à chaque modification 3. Le coût En production, chaque requête implique : un appel d’embedding, une recherche vectorielle, un reranking, et un appel LLM. Le coût unitaire est faible, mais à 10 000 requêtes/jour, l’addition monte vite. Le caching des embeddings de requêtes fréquentes a réduit notre facture de 35%.\nCe que je ferais différemment Commencer par l’évaluation, pas par l’architecture. Définir les métriques de succès avant d’écrire la première ligne de code Investir dans le chunking dès le début. C’est le levier qui a le meilleur ratio effort/impact Prévoir le multimodal dans l’architecture initiale. Nos documents contenaient des schémas techniques qu’on a dû ignorer dans la V1 Stack technique Composant Choix Embeddings text-embedding-3-large (OpenAI) Vector Store Qdrant (auto-hébergé) Reranker cross-encoder/ms-marco-MiniLM-L-6-v2 Orchestration LangChain (avec réserves) Évaluation RAGAS + jeu de test custom Cet article est le premier d’une série sur l’industrialisation de systèmes IA. Le prochain portera sur les systèmes de décision hybrides combinant moteurs de règles et LLM.\n",
+  "wordCount" : "505",
+  "inLanguage": "en",
+  "datePublished": "2026-02-15T00:00:00Z",
+  "dateModified": "2026-02-15T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Simon Stephan"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:51680/posts/rag-pipeline-production-retour-experience/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Simon Stephan",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:51680/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:51680/" accesskey="h" title="Simon Stephan (Alt + H)">Simon Stephan</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:51680/posts/" title="Articles">
+                    <span>Articles</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:51680/research/" title="Recherche">
+                    <span>Recherche</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Simon-Stephan?tab=repositories" title="Projets">
+                    <span>Projets</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:51680/about/" title="À propos">
+                    <span>À propos</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:51680/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:51680/posts/">Articles</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Construire un pipeline RAG pour la production : retour d&#39;expérience
+    </h1>
+    <div class="post-meta"><span title='2026-02-15 00:00:00 +0000 UTC'>February 15, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Simon Stephan</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="le-problème">Le problème<a hidden class="anchor" aria-hidden="true" href="#le-problème">#</a></h2>
+<p>La plupart des tutoriels RAG s&rsquo;arrêtent au prototype. Appeler une API d&rsquo;embedding, stocker des vecteurs dans ChromaDB et interroger un LLM, ça tient en 50 lignes de Python. Mais entre ce prototype et un système fiable en production, il y a un gouffre.</p>
+<p>Lors de mon passage chez OPSOMA, j&rsquo;ai conçu un pipeline RAG complet pour automatiser la recherche dans une base documentaire technique de plusieurs milliers de documents. Voici ce que j&rsquo;en retiens.</p>
+<h2 id="architecture-retenue">Architecture retenue<a hidden class="anchor" aria-hidden="true" href="#architecture-retenue">#</a></h2>
+<figure class="mermaid-wrap">
+  <pre class="mermaid">graph LR
+    A[Documents] --> B[Chunking]
+    B --> C[Embeddings]
+    C --> D[(Vector Store)]
+    E[Query] --> F[Embedding]
+    F --> G[Retrieval]
+    D --> G
+    G --> H[Reranking]
+    H --> I[LLM]
+    I --> J[Réponse]
+  </pre>
+</figure>
+<h3 id="chunking--le-maillon-critique">Chunking : le maillon critique<a hidden class="anchor" aria-hidden="true" href="#chunking--le-maillon-critique">#</a></h3>
+<p>Le découpage des documents est le facteur qui influence le plus la qualité des résultats. Après plusieurs itérations :</p>
+<ul>
+<li><strong>Taille de chunk</strong> : 512 tokens avec un overlap de 64 s&rsquo;est avéré être le meilleur compromis</li>
+<li><strong>Découpage sémantique</strong> : on ne coupe pas au milieu d&rsquo;un paragraphe. Un splitter basé sur la structure du document (titres, sections) surpasse systématiquement un découpage naïf par nombre de tokens</li>
+<li><strong>Métadonnées</strong> : chaque chunk embarque le titre du document source, la section parente et la date. Ces métadonnées sont essentielles pour le filtrage en amont du retrieval</li>
+</ul>
+<h3 id="reranking--le-gain-silencieux">Reranking : le gain silencieux<a hidden class="anchor" aria-hidden="true" href="#reranking--le-gain-silencieux">#</a></h3>
+<p>Le retrieval par similarité cosinus retourne souvent des résultats &ldquo;proches mais hors sujet&rdquo;. L&rsquo;ajout d&rsquo;un <strong>cross-encoder</strong> en phase de reranking a amélioré la précision de nos réponses de manière significative, pour un coût de latence acceptable (~100ms sur les 10 premiers résultats).</p>
+<h2 id="les-pièges-rencontrés">Les pièges rencontrés<a hidden class="anchor" aria-hidden="true" href="#les-pièges-rencontrés">#</a></h2>
+<h3 id="1-la-dérive-des-embeddings">1. La dérive des embeddings<a hidden class="anchor" aria-hidden="true" href="#1-la-dérive-des-embeddings">#</a></h3>
+<p>Les modèles d&rsquo;embedding évoluent. Une mise à jour du modèle invalide l&rsquo;intégralité de votre vector store. Il faut :</p>
+<ul>
+<li>Versionner le modèle d&rsquo;embedding utilisé</li>
+<li>Prévoir un pipeline de ré-indexation complet</li>
+<li>Ne jamais mélanger des vecteurs issus de modèles différents</li>
+</ul>
+<h3 id="2-lévaluation">2. L&rsquo;évaluation<a hidden class="anchor" aria-hidden="true" href="#2-lévaluation">#</a></h3>
+<p>Comment mesurer la qualité d&rsquo;un système RAG ? Nous avons mis en place :</p>
+<ul>
+<li>Un <strong>jeu de test</strong> de 200 questions/réponses validées par des experts métier</li>
+<li>Des métriques de <strong>retrieval</strong> (recall@k, MRR) séparées des métriques de <strong>génération</strong> (fidélité, pertinence)</li>
+<li>Un pipeline d&rsquo;évaluation automatisé exécuté à chaque modification</li>
+</ul>
+<h3 id="3-le-coût">3. Le coût<a hidden class="anchor" aria-hidden="true" href="#3-le-coût">#</a></h3>
+<p>En production, chaque requête implique : un appel d&rsquo;embedding, une recherche vectorielle, un reranking, et un appel LLM. Le coût unitaire est faible, mais à 10 000 requêtes/jour, l&rsquo;addition monte vite. Le caching des embeddings de requêtes fréquentes a réduit notre facture de 35%.</p>
+<h2 id="ce-que-je-ferais-différemment">Ce que je ferais différemment<a hidden class="anchor" aria-hidden="true" href="#ce-que-je-ferais-différemment">#</a></h2>
+<ul>
+<li><strong>Commencer par l&rsquo;évaluation</strong>, pas par l&rsquo;architecture. Définir les métriques de succès avant d&rsquo;écrire la première ligne de code</li>
+<li><strong>Investir dans le chunking</strong> dès le début. C&rsquo;est le levier qui a le meilleur ratio effort/impact</li>
+<li><strong>Prévoir le multimodal</strong> dans l&rsquo;architecture initiale. Nos documents contenaient des schémas techniques qu&rsquo;on a dû ignorer dans la V1</li>
+</ul>
+<h2 id="stack-technique">Stack technique<a hidden class="anchor" aria-hidden="true" href="#stack-technique">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Composant</th>
+          <th>Choix</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Embeddings</strong></td>
+          <td><code>text-embedding-3-large</code> (OpenAI)</td>
+      </tr>
+      <tr>
+          <td><strong>Vector Store</strong></td>
+          <td>Qdrant (auto-hébergé)</td>
+      </tr>
+      <tr>
+          <td><strong>Reranker</strong></td>
+          <td><code>cross-encoder/ms-marco-MiniLM-L-6-v2</code></td>
+      </tr>
+      <tr>
+          <td><strong>Orchestration</strong></td>
+          <td>LangChain (avec réserves)</td>
+      </tr>
+      <tr>
+          <td><strong>Évaluation</strong></td>
+          <td>RAGAS + jeu de test custom</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<p><em>Cet article est le premier d&rsquo;une série sur l&rsquo;industrialisation de systèmes IA. Le prochain portera sur les systèmes de décision hybrides combinant moteurs de règles et LLM.</em></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:51680/tags/rag/">RAG</a></li>
+      <li><a href="http://localhost:51680/tags/llm/">LLM</a></li>
+      <li><a href="http://localhost:51680/tags/python/">Python</a></li>
+      <li><a href="http://localhost:51680/tags/vector-db/">Vector DB</a></li>
+      <li><a href="http://localhost:51680/tags/production/">Production</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:51680/posts/definition-agent-ia-histoire-evolution/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>C&#39;est quoi un &#39;agent&#39; en IA ? De Wooldridge &amp; Jennings aux LLM agents</span>
+  </a>
+  <a class="next" href="http://localhost:51680/posts/ia-neuro-symbolique-pourquoi/">
+    <span class="title">Next »</span>
+    <br>
+    <span>IA Neuro-Symbolique : pourquoi les LLM ne suffisent pas</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:51680/">Simon Stephan</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

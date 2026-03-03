@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Simon Stephan</title>
+    <link>https://simon-stephan.github.io/tags/</link>
+    <description>Recent content in Tags on Simon Stephan</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Sun, 01 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://simon-stephan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agentic AI</title>
+      <link>https://simon-stephan.github.io/tags/agentic-ai/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/agentic-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Définition</title>
+      <link>https://simon-stephan.github.io/tags/d%C3%A9finition/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/d%C3%A9finition/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Histoire De L&#39;IA</title>
+      <link>https://simon-stephan.github.io/tags/histoire-de-lia/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/histoire-de-lia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>https://simon-stephan.github.io/tags/llm/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MAS</title>
+      <link>https://simon-stephan.github.io/tags/mas/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/mas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multi-Agent</title>
+      <link>https://simon-stephan.github.io/tags/multi-agent/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/multi-agent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Production</title>
+      <link>https://simon-stephan.github.io/tags/production/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/production/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://simon-stephan.github.io/tags/python/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RAG</title>
+      <link>https://simon-stephan.github.io/tags/rag/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/rag/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vector DB</title>
+      <link>https://simon-stephan.github.io/tags/vector-db/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/vector-db/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Explicabilité</title>
+      <link>https://simon-stephan.github.io/tags/explicabilit%C3%A9/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/explicabilit%C3%A9/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IA Neuro-Symbolique</title>
+      <link>https://simon-stephan.github.io/tags/ia-neuro-symbolique/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/ia-neuro-symbolique/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ontologies</title>
+      <link>https://simon-stephan.github.io/tags/ontologies/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/ontologies/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GNN</title>
+      <link>https://simon-stephan.github.io/tags/gnn/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/gnn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oncologie</title>
+      <link>https://simon-stephan.github.io/tags/oncologie/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/oncologie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HPC</title>
+      <link>https://simon-stephan.github.io/tags/hpc/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/hpc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Performance</title>
+      <link>https://simon-stephan.github.io/tags/performance/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/performance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>https://simon-stephan.github.io/tags/rust/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Architecture</title>
+      <link>https://simon-stephan.github.io/tags/architecture/</link>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/architecture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Modélisation Biologique</title>
+      <link>https://simon-stephan.github.io/tags/mod%C3%A9lisation-biologique/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/mod%C3%A9lisation-biologique/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Revue De Littérature</title>
+      <link>https://simon-stephan.github.io/tags/revue-de-litt%C3%A9rature/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/tags/revue-de-litt%C3%A9rature/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,9 @@
+<figure class="mermaid-wrap">
+  <pre class="mermaid">
+    {{- .Inner | safeHTML }}
+  </pre>
+  {{- with .Attributes.title }}
+  <figcaption>{{ . | markdownify }}</figcaption>
+  {{- end }}
+</figure>
+{{- .Page.Store.Set "hasMermaid" true }}

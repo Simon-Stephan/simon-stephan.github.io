@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Modélisation Biologique on Simon Stephan</title>
+    <link>https://simon-stephan.github.io/tags/mod%C3%A9lisation-biologique/</link>
+    <description>Recent content in Modélisation Biologique on Simon Stephan</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://simon-stephan.github.io/tags/mod%C3%A9lisation-biologique/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agent-based approaches for biological modeling in oncology: A literature review</title>
+      <link>https://simon-stephan.github.io/research/aim-2024-agent-based-biological-modeling-oncology/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/research/aim-2024-agent-based-biological-modeling-oncology/</guid>
+      <description>Étude exhaustive des architectures agentiques (MAS) appliquées à la modélisation biologique complexe en oncologie.</description>
+    </item>
+  </channel>
+</rss>

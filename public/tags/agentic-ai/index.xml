@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Agentic AI on Simon Stephan</title>
+    <link>https://simon-stephan.github.io/tags/agentic-ai/</link>
+    <description>Recent content in Agentic AI on Simon Stephan</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Sun, 01 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://simon-stephan.github.io/tags/agentic-ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#39;est quoi un &#39;agent&#39; en IA ? De Wooldridge &amp; Jennings aux LLM agents</title>
+      <link>https://simon-stephan.github.io/posts/definition-agent-ia-histoire-evolution/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/posts/definition-agent-ia-histoire-evolution/</guid>
+      <description>Le mot &amp;lsquo;agent&amp;rsquo; est partout. Mais sa définition actuelle est une version appauvrie d&amp;rsquo;un concept riche né dans les années 90. Retour aux sources.</description>
+    </item>
+    <item>
+      <title>Systèmes Multi-Agents : orchestrer l&#39;intelligence artificielle</title>
+      <link>https://simon-stephan.github.io/posts/systemes-multi-agents-orchestration-ia/</link>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/posts/systemes-multi-agents-orchestration-ia/</guid>
+      <description>Les systèmes multi-agents ne sont pas nouveaux. Mais combinés aux LLM, ils ouvrent des possibilités architecturales inédites.</description>
+    </item>
+  </channel>
+</rss>

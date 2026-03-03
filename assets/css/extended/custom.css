@@ -1,0 +1,871 @@
+/* ============================================================
+   Simon Stephan — Developer / Researcher Blog
+   Compact, sharp, technical aesthetic
+   ============================================================ */
+
+/* --- Fonts: Inter (body) + JetBrains Mono (code/accents) --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* --- Palette --- */
+:root {
+    --accent: #2563EB;
+    --accent-hover: #1d4ed8;
+    --accent-light: #dbeafe;
+    --accent-subtle: rgba(37, 99, 235, 0.05);
+    --accent-border: rgba(37, 99, 235, 0.25);
+
+    --theme: #f8f9fb;
+    --entry: #ffffff;
+    --border: #d8dce5;
+    --secondary: rgb(85, 90, 100);
+    --content: rgb(30, 33, 40);
+    --code-bg: #eef1f6;
+    --code-block-bg: #1e1f26;
+    --radius: 6px;
+    --gap: 20px;
+    --content-gap: 16px;
+    --main-width: 780px;
+    --header-height: 50px;
+    --footer-height: 50px;
+}
+
+:root[data-theme="dark"] {
+    --accent: #60a5fa;
+    --accent-hover: #93bbfd;
+    --accent-light: rgba(96, 165, 250, 0.1);
+    --accent-subtle: rgba(96, 165, 250, 0.04);
+    --accent-border: rgba(96, 165, 250, 0.25);
+
+    --theme: #111215;
+    --entry: #1a1c21;
+    --border: #2a2d35;
+    --secondary: rgb(130, 135, 145);
+    --content: rgb(200, 203, 210);
+    --code-bg: #1e2028;
+    --code-block-bg: #14151a;
+}
+
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+::selection {
+    background: var(--accent-light);
+    color: var(--content);
+}
+
+.main {
+    padding: 0 var(--gap);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Même fond partout (celui des pages list) */
+body {
+    background: var(--code-bg);
+}
+
+[data-theme="dark"] body {
+    background: var(--theme);
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header {
+    background: var(--entry);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav {
+    line-height: var(--header-height);
+}
+
+.nav .logo a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav .logo a:hover {
+    color: var(--accent);
+}
+
+#menu a {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-bottom: 2px;
+    transition: color 0.15s;
+}
+
+#menu li + li {
+    margin-inline-start: 18px;
+}
+
+#menu a:hover,
+#menu .active {
+    color: var(--accent);
+}
+
+#menu .active {
+    border-bottom: 2px solid var(--accent);
+}
+
+#theme-toggle {
+    font-size: 20px;
+}
+
+#theme-toggle:hover {
+    color: var(--accent);
+}
+
+/* ============================================================
+   HOME — Bannière d'accueil
+   ============================================================ */
+.first-entry {
+    min-height: unset;
+    margin: 0 0 var(--gap) 0;
+    padding: 1.5rem;
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: var(--entry);
+    border-top: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.first-entry .entry-header h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 1.3;
+}
+
+.home-info .entry-content {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--secondary);
+    margin: 8px 0 4px;
+}
+
+.home-info .entry-content p {
+    margin-bottom: 0;
+}
+
+/* ============================================================
+   CARTES D'ARTICLES
+   ============================================================ */
+.post-entry {
+    position: relative;
+    padding: 0;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-border);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: var(--entry);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+    overflow: hidden;
+}
+
+.post-entry::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--accent-subtle) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.25s;
+    pointer-events: none;
+}
+
+.post-entry:hover {
+    border-left-color: var(--accent);
+    box-shadow: 0 6px 24px rgba(37, 99, 235, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04);
+    transform: translateY(-3px);
+}
+
+.post-entry:hover::before {
+    opacity: 1;
+}
+
+:root[data-theme="dark"] .post-entry:hover {
+    box-shadow: 0 6px 24px rgba(96, 165, 250, 0.1), 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post-entry:active {
+    transform: translateY(-1px);
+}
+
+/* --- Header de la card (titre) --- */
+.post-entry .entry-header {
+    padding: 1rem;
+}
+
+.entry-header h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 1.4;
+    color: var(--content);
+    transition: color 0.2s;
+}
+
+.post-entry:hover .entry-header h2 {
+    color: var(--accent);
+}
+
+/* --- Corps de la card (résumé) --- */
+.post-entry .entry-content {
+    padding: 0 1.4rem;
+    margin: 0.45rem 0 0;
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: var(--secondary);
+    -webkit-line-clamp: 3;
+}
+
+/* --- Tags dans la card --- */
+.post-entry .entry-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0 1.4rem;
+    margin-top: 0.7rem;
+    position: relative;
+    z-index: 1;
+}
+
+.post-entry .entry-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    color: var(--accent);
+    background: var(--accent-subtle);
+    border: 1px solid var(--accent-border);
+    border-radius: 3px;
+    padding: 2px 8px;
+    line-height: 1.6;
+    transition: background 0.15s, color 0.15s;
+}
+
+.post-entry:hover .entry-tag {
+    background: rgba(37, 99, 235, 0.08);
+}
+
+:root[data-theme="dark"] .post-entry:hover .entry-tag {
+    background: rgba(96, 165, 250, 0.1);
+}
+
+/* --- Footer de la card (date, temps, auteur) --- */
+.post-entry .entry-footer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--secondary);
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0.7rem 1.4rem 0;
+    padding: 0.65rem 0 0.7rem;
+    border-top: 1px solid var(--border);
+    opacity: 0.75;
+    transition: opacity 0.2s;
+}
+
+.post-entry:hover .entry-footer {
+    opacity: 1;
+}
+
+/* ============================================================
+   PAGE HEADERS (sections : Articles, Recherche)
+   ============================================================ */
+.page-header {
+    margin: var(--gap) 0;
+    padding: 1.5rem var(--gap) 1.2rem;
+    background: linear-gradient(135deg, var(--accent-subtle) 0%, transparent 60%);
+    border-bottom: 2px solid var(--accent);
+    border-radius: 0;
+}
+
+.page-header .breadcrumbs {
+    margin-bottom: 6px;
+}
+
+.page-header h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--content);
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post-description {
+    font-size: 13px;
+    color: var(--secondary);
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   PAGE HEADER (single : À propos, articles individuels)
+   ============================================================ */
+.post-header {
+    margin: var(--gap) 0;
+    padding: 1.5rem var(--gap) 1.2rem;
+    background: linear-gradient(135deg, var(--accent-subtle) 0%, transparent 60%);
+    border-bottom: 2px solid var(--accent);
+    border-radius: 0;
+}
+
+.post-header .breadcrumbs {
+    margin-bottom: 6px;
+}
+
+.post-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+    color: var(--content);
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.post-header .post-description {
+    font-size: 13px;
+    color: var(--secondary);
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+.post-meta {
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--secondary);
+}
+
+.breadcrumbs {
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.breadcrumbs a {
+    font-size: 12px;
+    color: var(--secondary);
+    transition: color 0.15s;
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent);
+}
+
+/* ============================================================
+   ARTICLE — CONTENU
+   ============================================================ */
+.post-content {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--content);
+    margin: 20px 0;
+}
+
+.post-content p {
+    margin-bottom: 1em;
+}
+
+/* --- Titres --- */
+.post-content h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 2em 0 0.6em;
+}
+
+.post-content h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    margin: 1.8em 0 0.6em;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--accent-border);
+}
+
+.post-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 1.5em 0 0.5em;
+}
+
+.post-content h4 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin: 1.2em 0 0.4em;
+}
+
+/* --- Liens --- */
+.post-content a {
+    color: var(--accent);
+    text-decoration: none;
+    box-shadow: 0 1px 0 var(--accent-border);
+    transition: box-shadow 0.15s;
+}
+
+.post-content a:hover {
+    color: var(--accent-hover);
+    box-shadow: 0 2px 0 var(--accent);
+}
+
+/* --- Listes --- */
+.post-content li {
+    margin-top: 3px;
+    line-height: 1.6;
+    font-size: 14.5px;
+}
+
+.post-content ul li::marker {
+    color: var(--accent);
+}
+
+.post-content ol li::marker {
+    color: var(--accent);
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.post-content ol,
+.post-content ul {
+    margin-bottom: 1em;
+}
+
+/* --- Séparateurs --- */
+.post-content hr {
+    border: none;
+    height: 1px;
+    background: var(--border);
+    margin: 1.5em 0;
+}
+
+/* --- Citations --- */
+.post-content blockquote {
+    margin: 1em 0;
+    padding: 0.6em 1em;
+    border-inline-start: 3px solid var(--accent);
+    background: var(--accent-subtle);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 14px;
+}
+
+.post-content blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Code inline --- */
+.post-content code:not(pre > code) {
+    font-family: 'JetBrains Mono', monospace;
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 0.82em;
+}
+
+/* --- Blocs de code --- */
+.post-content pre code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.55;
+    border-radius: var(--radius);
+}
+
+.post-content .highlight:not(table) {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+/* --- Tableaux --- */
+.post-single .post-content table,
+.post-content table {
+    display: table !important;
+    width: 100% !important;
+    max-width: 100%;
+    font-size: 14px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+/* En-tête vide (tableaux markdown sans header) : masquer */
+.post-content table thead tr th:empty {
+    padding: 0;
+    border: none;
+    line-height: 0;
+    height: 0;
+    font-size: 0;
+}
+
+.post-content table thead:has(th:empty) {
+    display: none;
+}
+
+/* Colonnes : label compact, valeur s'étend */
+.post-content table colgroup,
+.post-content table col {
+    width: auto;
+}
+
+.post-content table td:first-child {
+    width: 120px;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.post-content table th {
+    background: var(--accent-subtle);
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+    border-bottom: 2px solid var(--accent-border);
+    padding: 8px 12px;
+}
+
+.post-content table:not(.highlighttable, .highlight table, .gist .highlight) td {
+    padding: 7px 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+.post-content table tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- Images --- */
+.post-content img {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+/* ============================================================
+   TABLE DES MATIÈRES
+   ============================================================ */
+.toc {
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    background: var(--accent-subtle);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 0.4em 0.8em;
+    margin-bottom: var(--content-gap);
+}
+
+[data-theme="dark"] .toc {
+    background: var(--accent-subtle);
+}
+
+.toc details summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.toc a {
+    color: var(--secondary);
+    font-size: 13px;
+    box-shadow: none;
+}
+
+.toc a:hover {
+    color: var(--accent);
+    box-shadow: none;
+}
+
+.toc .inner {
+    margin: 4px 16px;
+    padding: 0 8px;
+}
+
+/* ============================================================
+   TAGS
+   ============================================================ */
+.post-tags a {
+    font-family: 'JetBrains Mono', monospace;
+    background: var(--accent-subtle);
+    border: 1px solid var(--accent-border);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 0 10px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    transition: background 0.15s, color 0.15s;
+}
+
+.post-tags a:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+
+.post-tags {
+    gap: 6px;
+}
+
+/* ============================================================
+   NAVIGATION ENTRE POSTS
+   ============================================================ */
+.paginav {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-top: var(--content-gap);
+}
+
+.paginav a {
+    padding: 10px 14px;
+    font-size: 14px;
+    transition: background 0.15s;
+}
+
+.paginav a:hover {
+    background: var(--accent-subtle);
+    color: var(--accent);
+}
+
+.paginav .title {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================================
+   SOCIAL ICONS
+   ============================================================ */
+.social-icons a {
+    padding: 8px;
+    transition: transform 0.15s;
+}
+
+.social-icons a svg {
+    height: 22px;
+    width: 22px;
+}
+
+.social-icons a:hover {
+    transform: translateY(-1px);
+}
+
+.social-icons a:hover svg {
+    fill: var(--accent);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    padding: 12px var(--gap);
+    max-width: none;
+}
+
+.footer a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* ============================================================
+   BOUTON RETOUR EN HAUT
+   ============================================================ */
+.top-link {
+    background: var(--accent);
+    border: none;
+    width: 36px;
+    height: 36px;
+    padding: 10px;
+    bottom: 50px;
+    right: 24px;
+}
+
+.top-link svg {
+    fill: #fff;
+}
+
+.top-link:hover {
+    background: var(--accent-hover);
+}
+
+/* ============================================================
+   COPY CODE BUTTON
+   ============================================================ */
+.copy-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+}
+
+.copy-code:hover {
+    color: var(--accent) !important;
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* ============================================================
+   EXPÉRIENCE — Titre + date alignée à droite
+   ============================================================ */
+.post-content .xp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1em;
+    margin: 1.5em 0 0.4em;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--border);
+}
+
+.post-content .xp-header .xp-title {
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--content);
+    margin: 0;
+    line-height: 1.35;
+}
+
+.post-content .xp-header .xp-title em {
+    color: var(--secondary);
+}
+
+.post-content .xp-header .xp-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--secondary);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   DIAGRAMMES MERMAID
+   ============================================================ */
+.mermaid-wrap {
+    text-align: center;
+    margin: 1.5em 0;
+    padding: 1em 0;
+    background: var(--accent-subtle);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.mermaid-wrap pre.mermaid {
+    display: flex;
+    justify-content: center;
+    background: transparent !important;
+    border: none !important;
+    margin: 0;
+    padding: 0.5em 1em;
+}
+
+.mermaid-wrap figcaption {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--secondary);
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    border-top: 1px solid var(--border);
+    font-style: italic;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media screen and (max-width: 768px) {
+    .post-title {
+        font-size: 20px;
+    }
+
+    .post-content {
+        font-size: 14.5px;
+    }
+
+    .post-content h2 {
+        font-size: 17px;
+    }
+
+    .post-content h3 {
+        font-size: 15px;
+    }
+
+    .first-entry {
+        padding: 1rem;
+    }
+
+    #menu a {
+        font-size: 12px;
+    }
+
+    .nav .logo a {
+        font-size: 15px;
+    }
+
+    .page-header,
+    .post-header {
+        margin-left: calc(var(--gap) * -1);
+        margin-right: calc(var(--gap) * -1);
+        padding: 1.2rem var(--gap) 1rem;
+    }
+
+    .page-header h1,
+    .post-title {
+        font-size: 20px;
+    }
+}

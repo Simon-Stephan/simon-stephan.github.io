@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Articles on Simon Stephan</title>
+    <link>https://simon-stephan.github.io/posts/</link>
+    <description>Recent content in Articles on Simon Stephan</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Sun, 01 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://simon-stephan.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#39;est quoi un &#39;agent&#39; en IA ? De Wooldridge &amp; Jennings aux LLM agents</title>
+      <link>https://simon-stephan.github.io/posts/definition-agent-ia-histoire-evolution/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/posts/definition-agent-ia-histoire-evolution/</guid>
+      <description>Le mot &amp;lsquo;agent&amp;rsquo; est partout. Mais sa définition actuelle est une version appauvrie d&amp;rsquo;un concept riche né dans les années 90. Retour aux sources.</description>
+    </item>
+    <item>
+      <title>Construire un pipeline RAG pour la production : retour d&#39;expérience</title>
+      <link>https://simon-stephan.github.io/posts/rag-pipeline-production-retour-experience/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/posts/rag-pipeline-production-retour-experience/</guid>
+      <description>Les leçons tirées de la conception et du déploiement d&amp;rsquo;un pipeline de Retrieval-Augmented Generation en environnement industriel.</description>
+    </item>
+    <item>
+      <title>IA Neuro-Symbolique : pourquoi les LLM ne suffisent pas</title>
+      <link>https://simon-stephan.github.io/posts/ia-neuro-symbolique-pourquoi/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/posts/ia-neuro-symbolique-pourquoi/</guid>
+      <description>Les réseaux de neurones excellent en reconnaissance de motifs. Les systèmes symboliques excellent en raisonnement. L&amp;rsquo;avenir est dans leur hybridation.</description>
+    </item>
+    <item>
+      <title>Rust pour l&#39;ingénieur IA : au-delà du hype</title>
+      <link>https://simon-stephan.github.io/posts/rust-pour-ingenieur-ia/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/posts/rust-pour-ingenieur-ia/</guid>
+      <description>Python pour prototyper, Rust pour déployer. Retour pragmatique sur l&amp;rsquo;adoption de Rust dans un contexte d&amp;rsquo;IA industrielle.</description>
+    </item>
+    <item>
+      <title>Systèmes Multi-Agents : orchestrer l&#39;intelligence artificielle</title>
+      <link>https://simon-stephan.github.io/posts/systemes-multi-agents-orchestration-ia/</link>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/posts/systemes-multi-agents-orchestration-ia/</guid>
+      <description>Les systèmes multi-agents ne sont pas nouveaux. Mais combinés aux LLM, ils ouvrent des possibilités architecturales inédites.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Oncologie on Simon Stephan</title>
+    <link>https://simon-stephan.github.io/tags/oncologie/</link>
+    <description>Recent content in Oncologie on Simon Stephan</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Thu, 01 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://simon-stephan.github.io/tags/oncologie/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Identification of Novel Therapeutic Targets in Oncology Using a Hybrid AI Approach Integrating Ontologies, Multi-Agent Systems, and Neural Networks</title>
+      <link>https://simon-stephan.github.io/research/icprai-2026-hybrid-ai-therapeutic-targets/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/research/icprai-2026-hybrid-ai-therapeutic-targets/</guid>
+      <description>Présentation d&amp;rsquo;un framework d&amp;rsquo;IA hybride pour la découverte de cibles thérapeutiques, avec un focus sur la reconnaissance de motifs complexes.</description>
+    </item>
+    <item>
+      <title>Agent-based approaches for biological modeling in oncology: A literature review</title>
+      <link>https://simon-stephan.github.io/research/aim-2024-agent-based-biological-modeling-oncology/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/research/aim-2024-agent-based-biological-modeling-oncology/</guid>
+      <description>Étude exhaustive des architectures agentiques (MAS) appliquées à la modélisation biologique complexe en oncologie.</description>
+    </item>
+    <item>
+      <title>Identification de nouvelles cibles thérapeutiques par hybridation d&#39;Ontologies, systèmes Multi-Agents et réseaux de neurones</title>
+      <link>https://simon-stephan.github.io/research/jfsma-2025-hybridation-ontologies-mas-neurones/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://simon-stephan.github.io/research/jfsma-2025-hybridation-ontologies-mas-neurones/</guid>
+      <description>Présentation d&amp;rsquo;une architecture novatrice permettant l&amp;rsquo;explicabilité et le raisonnement automatisé sur des données de nature hétérogène.</description>
+    </item>
+  </channel>
+</rss>
