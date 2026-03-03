@@ -1,0 +1,13 @@
+{{- with site.Params.homeInfoParams }}
+<header class="page-header home-header">
+    <h1>{{ .Title | markdownify }}</h1>
+    {{- if .Content }}
+    <div class="post-description">
+        {{ .Content | markdownify }}
+    </div>
+    {{- end }}
+    <div class="home-social">
+        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+    </div>
+</header>
+{{- end -}}
