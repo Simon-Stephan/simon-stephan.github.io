@@ -130,38 +130,22 @@ header {
 }
 
 /* ============================================================
-   HOME — Bannière d'accueil
+   HOME — Bannière d'accueil (même style que page-header)
    ============================================================ */
-.first-entry {
-    min-height: unset;
-    margin: 0 0 var(--gap) 0;
-    padding: 1.5rem;
-    border-left: 3px solid var(--accent);
-    border-radius: 0 var(--radius) var(--radius) 0;
-    background: var(--entry);
-    border-top: 1px solid var(--border);
-    border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+.home-header {
+    margin-top: var(--gap);
 }
 
-.first-entry .entry-header h1 {
-    font-family: 'Inter', sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: -0.3px;
-    line-height: 1.3;
-}
-
-.home-info .entry-content {
-    font-size: 14px;
-    line-height: 1.65;
-    color: var(--secondary);
-    margin: 8px 0 4px;
-}
-
-.home-info .entry-content p {
+.home-header .post-description p {
     margin-bottom: 0;
+}
+
+.home-social {
+    margin-top: 10px;
+}
+
+.home-social .social-icons {
+    justify-content: flex-start;
 }
 
 /* ============================================================
@@ -845,8 +829,10 @@ header {
         font-size: 15px;
     }
 
-    .first-entry {
-        padding: 1rem;
+    .home-header {
+        margin-left: calc(var(--gap) * -1);
+        margin-right: calc(var(--gap) * -1);
+        padding: 1.2rem var(--gap) 1rem;
     }
 
     #menu a {
