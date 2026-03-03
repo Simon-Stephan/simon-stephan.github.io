@@ -1,0 +1,17 @@
+# Hugo - fichiers générés
+public/
+resources/_gen/
+
+# Éditeurs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporaire
+temp/
